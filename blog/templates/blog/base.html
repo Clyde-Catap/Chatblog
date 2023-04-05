@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/main.css' %}">
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/8f49d24cf7.js" crossorigin="anonymous"></script>
+
+    {% if title %}
+        <title>Django Blog - {{ title }}</title>
+    {% else %}
+        <title>Django Title</title>
+    {% endif %}
+</head>
+
+<body>
+<!-- NAV BAR -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+            <!--Center Nav Bar-->
+              <div class="container d-flex justify-content-center">
+              <ul class="navbar-nav flex-row d-none d-md-flex">
+                  <li class="nav-item me-3 me-lg-1 navic">
+                      <!--HOME-->
+                    <a class="nav-link" href="#">
+                      <span><i class="fa-solid fa-house fa-xl" style="color: #e0e2e6;"></i></span>
+                    </a>
+                  </li>
+                      <!--CONTACT-->
+                  <li class="nav-item me-3 me-lg-1 navic">
+                    <a class="nav-link" href="#">
+                      <span><i class="fa-solid fa-phone fa-xl" style="color: #e0e2e6;"></i></span>
+                    </a>
+                  </li>
+                       <!--CONNECTIONS-->
+                  <li class="nav-item me-3 me-lg-1 navic">
+                    <a class="nav-link" href="#">
+                      <span><i class="fa-solid fa-users fa-xl" style="color: #e0e2e6;"></i></span>
+                    </a>
+                  </li>
+                       <!--ABOUT-->
+                  <li class="nav-item me-3 me-lg-1 navic">
+                    <a class="nav-link" href="#">
+                      <span><i class="fa-solid fa-info fa-xl" style="color: #e0e2e6;"></i></span>
+                    </a>
+                  </li>
+
+              </ul>
+              </div>
+            <!-- Navbar Right Side -->
+            <!--Notifications-->
+            <div class="container d-flex justify-content-center w-25 h-75">
+            <ul class="navbar-nav flex-row d-none d-md-flex">
+                <li class="nav-item d-flex align-items-center dropdown navright">
+                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!--Notif Image-->
+                      <i class="fa-solid fa-bell fa-xl" style="color: #e0e2e6;"></i>
+                        <!--Notification Count-->
+                        <span class="position-absolute top-85 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                        <!--Notification Count-->
+                  </a>
+                    <!--Notif Messages-->
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Notification 1</a></li>
+                    <li><a class="dropdown-item" href="#">Notification 2</a></li>
+                    <li><a class="dropdown-item" href="#">Notification 3</a></li>
+                  </ul>
+                </li>
+            <!--Notifications-->
+            <!--Messages-->
+                <li class="nav-item d-flex align-items-center dropdown navright">
+                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!--Message Image-->
+                      <i class="fa-solid fa-envelope fa-xl" style="color: #e0e2e6;"></i>
+                      <!--Message Count-->
+                        <span class="position-absolute top-85 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                      <!--Message Count-->
+                  </a>
+                    <!--Messages List-->
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Message1</a></li>
+                    <li><a class="dropdown-item" href="#">Message2</a></li>
+                    <li><a class="dropdown-item" href="#">Message3</a></li>
+                  </ul>
+                </li>
+            <!--Messages-->
+            <!--Profile-->
+                <li class="nav-item d-flex align-items-center dropdown navright">
+                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!--User Image-->
+                        <img
+                        src="https://i.pinimg.com/originals/dc/29/1d/dc291d1ac415ebbaa368ecb7157d3f8b.jpg"
+                        class="rounded-circle prof-image"
+                        height="35"
+                        alt="Black and White Portrait of a Man"
+                        loading="lazy"
+                        >
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                  </ul>
+                </li>
+            </ul>
+            </div>
+            <!--Profile-->
+            <!-- Navbar Right Side -->
+          </div>
+        </div>
+      </nav>
+    </header>
+<!-- NAV BAR -->
+    <div class="container">
+    {% block content %} {% endblock %}
+    </div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
