@@ -3,9 +3,15 @@ body {
   margin-top: 5rem;
 }
 
-h1, h2, h4, h5, h6 {
+h1, h2, h4, h5 {
   color: #576CBC;
 }
+
+h6 {
+    color: #576CBC;
+    margin: 0;
+}
+
 h3 {
     color: #FFFFFF;
 }
@@ -111,10 +117,6 @@ a.article-title:hover {
     color: #FFFFFF;
 }
 
-.card {
-    width: 50%;
-
-}
 
 .card-c {
     padding-top: 10px;
@@ -122,4 +124,14 @@ a.article-title:hover {
 }
 .card-body {
      background-color: #152232;
+}
+.anchor {
+    color: #FFFFFF;
+}
+
+.comment-c {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
 }

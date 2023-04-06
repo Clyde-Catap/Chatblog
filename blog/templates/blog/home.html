@@ -1,22 +1,77 @@
 {% extends "blog/base.html" %}
 {% block content%}
-    {% for post in posts %}
-        <div class="container card-c">
-        <div class="card border-0">
-          <div class="card-body border-0">
-            <h3 class="title-set">{{ post.title }}</h3>
-            <p class="content-set">By <img
-                        src="https://i.pinimg.com/originals/dc/29/1d/dc291d1ac415ebbaa368ecb7157d3f8b.jpg"
-                        class="rounded-circle prof-image"
-                        height="35"
-                        alt="Black and White Portrait of a Man"
-                        loading="lazy"
-                        > <a class="user-name text-decoration-none info-link">{{ post.author }}</a> on {{ post.date_posted }} </p>
-            <p class="content-set"> {{ post.content }}</p>
-          </div>
+<div class="container">
+    <div class="row">
+    <!--LEFT COLUMN-->
+        <div class="col-8">
+        <!--Following Posts-->
+            <div class="container">
+              <div class="row">
+                  <div class="col-sm-8">
+                      <div class="p-2 bd-highlight align-middle"><h6><button type="button" class="btn btn-link text-decoration-none info-link anchor user-name">Recent Activity</button></h6></div>
+                  </div>
+                <div class="col-sm-4">
+                    <div class="d-flex flex-row-reverse bd-highlight ">
+                        <div class="p-2 bd-highlight align-middle"><h6><button type="button" class="btn btn-link text-decoration-none info-link anchor user-name">Global</button></h6></div>
+                        <div class="p-2 bd-highlight align-middle"><h6><button type="button" class="btn btn-link text-decoration-none info-link anchor user-name">Following</button></h6></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        <!--Following Posts-->
+        <!--Recent Posts-->
+            {% for post in posts %}
+                <div class="container card-c">
+                <div class="card border-0">
+                  <div class="card-body border-0">
+                    <h3 class="title-set">{{ post.title }}</h3>
+                    <!--User Details-->
+                    <p class="content-set">By <img
+                                src="https://i.pinimg.com/originals/dc/29/1d/dc291d1ac415ebbaa368ecb7157d3f8b.jpg"
+                                class="rounded-circle prof-image"
+                                height="35"
+                                alt="Black and White Portrait of a Man"
+                                loading="lazy"
+                                > <a class="user-name text-decoration-none info-link" href="">{{ post.author }}</a> on {{ post.date_posted }} </p>
+                <!--Content post-->
+                    <p class="content-set"> {{ post.content }}</p>
+                  </div>
+                </div>
+                </div>
+            {% endfor %}
         </div>
+    <!--LEFT COLUMN-->
+    <!--RIGHT COLUMN-->
+        <div class="col-4">
+
+            <div class="container">
+              <div class="row">
+                      <div class="p-2 bd-highlight align-middle"><h6><button type="button" class="btn btn-link text-decoration-none info-link anchor user-name">Forum Activity</button></h6></div>
+              </div>
+            </div>
+
+            <div class="container comment-c">
+                <div class="card border-0">
+                  <div class="card-body border-0">
+                    <h3 class="title-set">{{ post.title }}</h3>
+                    <!--User Details-->
+                    <p class="content-set">By <img
+                                src="https://i.pinimg.com/originals/dc/29/1d/dc291d1ac415ebbaa368ecb7157d3f8b.jpg"
+                                class="rounded-circle prof-image"
+                                height="35"
+                                alt="Black and White Portrait of a Man"
+                                loading="lazy"
+                                > <a class="user-name text-decoration-none info-link" href="">{{ post.author }}</a> on {{ post.date_posted }} </p>
+                <!--Content post-->
+                    <p class="content-set"> {{ post.content }}</p>
+                  </div>
+                </div>
+            </div>
         </div>
-    {% endfor %}
+    </div>
+    <!--RIGHT COLUMN-->
+</div>
+<!--Recent Posts-->
 {% endblock content %}
 
 

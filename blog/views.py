@@ -3,14 +3,14 @@ from django.http import HttpResponse
 # Create your views here.
 posts = [
     {
-        'author': 'Clyde',
+        'author': 'Clyde Bryon Catap',
         'title': 'Blog Post 1',
         'content': 'First post content',
         'date_posted': 'August 27, 2018'
 
     },
     {
-        'author': 'Bryon',
+        'author': 'Bryon Catap',
         'title': 'Blog Post 1',
         'content': 'First post content',
         'date_posted': 'August 18, 2018'
@@ -19,9 +19,29 @@ posts = [
 
 ]
 
+recent_comments = [
+    {
+        'author': 'Bryon Catap',
+        "title": 'Blog Post 1',
+        # should be only 100 chars
+        'comment': 'comment',
+        'date_commented': "September 6 2203"
+
+    },
+    {
+        'author': 'Bryon Catap',
+        "title": 'Blog Post 1',
+        # should be only 100 chars
+        'comment': 'comment',
+        'date_commented': "September 6 2203"
+
+    },
+]
+
 def home(request):
     content = {
         'posts': posts,
+        "comments": recent_comments,
 
     }
     return render(request, "blog/home.html", content)
