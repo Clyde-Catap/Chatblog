@@ -19,12 +19,12 @@ posts = [
 
 ]
 
-recent_comments = [
+comments = [
     {
-        'author': 'Bryon Catap',
+        'author': 'Clyde Catap',
         "title": 'Blog Post 1',
         # should be only 100 chars
-        'comment': 'comment',
+        'comment': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         'date_commented': "September 6 2203"
 
     },
@@ -32,7 +32,7 @@ recent_comments = [
         'author': 'Bryon Catap',
         "title": 'Blog Post 1',
         # should be only 100 chars
-        'comment': 'comment',
+        'comment': 'Lorem ipsum dolor sit amet, consectetur.',
         'date_commented': "September 6 2203"
 
     },
@@ -41,12 +41,12 @@ recent_comments = [
 def home(request):
     content = {
         'posts': posts,
-        "comments": recent_comments,
-
+        'comments': comments,
     }
+
     return render(request, "blog/home.html", content)
 
 def about(request):
-    return render(request, "blog/about.html", { "title": "About" })
+    return render(request, "blog/about.html", { "title": "Working", })
 
 
