@@ -22,7 +22,7 @@
 
 <body>
 <!-- NAV BAR -->
-    <header class="site-header">
+    <header class="site-header naver">
       <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
         <div class="container">
           <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Chat Blog</a>
@@ -136,9 +136,7 @@
       </nav>
     </header>
 <!-- NAV BAR -->
-    <div class="container">
     {% block content %} {% endblock %}
-    </div>
 <!-- FOOTER -->
     <footer class="text-center text-white footer-a">
       <!-- Grid container -->

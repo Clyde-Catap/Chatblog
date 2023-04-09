@@ -152,9 +152,44 @@ a.article-title:hover {
     padding-bottom: 30px;
 
 }
+
 .footer-a {
     background-color: #11161d;
 }
 .footer-b {
     color: #FFFFFF;
+}
+
+.banner {
+    background-image: url("https://img.freepik.com/free-vector/whale-swims-deep-space-illustration_33099-2027.jpg?w=1480&t=st=1681057437~exp=1681058037~hmac=7b09ce0b75f52701cc176aef936de4b2049d2e39a281be035dd57038225783f8");
+    height: 400px;
+}
+.image-banner {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+.prof-pic {
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    position: absolute;
+    top: 320px;
+    left: 350px;
+    z-index: 1;
+}
+.pic-pos {
+    padding-left: 150px;
+    padding-right: 150px
+    padding-bottom: 600px;
+    position: absolute;
+    top: 320px;
+    left: 350px;
+    z-index: 1;
+}
+.prof-contents {
+    padding-top: 160px;
 }

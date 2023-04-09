@@ -91,4 +91,12 @@ def home(request):
 def about(request):
     return render(request, "blog/about.html", { "title": "Working", })
 
+def Profile(request):
+    content = {
+        'posts': posts,
+        'comments': comments,
+    }
+
+    return render(request, "blog/profile.html", content)
+
 
