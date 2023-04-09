@@ -137,7 +137,8 @@ a.article-title:hover {
 }
 
 .side-b {
-    background-color: #0b1622;
+    background-color: #152232;
+
 }
 
 .side-c {
@@ -149,4 +150,11 @@ a.article-title:hover {
 }
 .guide-bar-a {
     padding-bottom: 30px;
+
+}
+.footer-a {
+    background-color: #11161d;
+}
+.footer-b {
+    color: #FFFFFF;
 }

@@ -15,7 +15,49 @@ posts = [
         'content': 'First post content',
         'date_posted': 'August 18, 2018'
 
-    }
+    },
+    {
+        'author': 'Clyde Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 27, 2018'
+
+    },
+    {
+        'author': 'Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 18, 2018'
+
+    },
+    {
+        'author': 'Clyde Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 27, 2018'
+
+    },
+    {
+        'author': 'Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 18, 2018'
+
+    },
+    {
+        'author': 'Clyde Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 27, 2018'
+
+    },
+    {
+        'author': 'Bryon Catap',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 18, 2018'
+
+    },
 
 ]
 
