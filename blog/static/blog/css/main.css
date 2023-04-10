@@ -145,6 +145,12 @@ a.article-title:hover {
     color: #FFFFFF;
 }
 
+.side-d {
+    margin-top: 10px;
+    background-color: #152232;
+
+}
+
 .guide-bar {
     background-color: #152232;
 }
@@ -216,4 +222,18 @@ a.article-title:hover {
 .desc-comment{
     padding-top: 7.5px;
     padding-bottom: 7.5px;
+}
+.buttns-a {
+    position: absolute;
+    right: 140px;
+}
+
+.buttns-b {
+    position: absolute;
+    right: 30px;
+}
+
+.prof-contents {
+    position: relative;
+
 }
