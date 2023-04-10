@@ -80,6 +80,9 @@ comments = [
     },
 ]
 
+def landing(request):
+    return render(request, "blog/landing.html")
+
 def home(request):
     content = {
         'posts': posts,
