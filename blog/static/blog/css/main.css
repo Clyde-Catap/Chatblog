@@ -177,7 +177,7 @@ a.article-title:hover {
     border-radius: 50%;
     border: 5px solid #000000;
     position: absolute;
-    top: 320px;
+    top: 400px;
     left: 350px;
     z-index: 1;
 }
@@ -191,5 +191,29 @@ a.article-title:hover {
     z-index: 1;
 }
 .prof-contents {
-    padding-top: 160px;
+    padding-top: 240px;
+}
+
+.desc {
+    left: 660px;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 12px;
+}
+.desc-name{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    text-align: left;
+}
+.desc-title{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    text-align: left;
+}
+.desc-comment{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 }
