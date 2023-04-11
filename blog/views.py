@@ -81,7 +81,7 @@ comments = [
 ]
 
 def landing(request):
-    return render(request, "blog/landing.html")
+    return render(request, "blog/landing-content.html")
 
 def home(request):
     content = {
@@ -101,5 +101,8 @@ def Profile(request):
     }
 
     return render(request, "blog/profile.html", content)
+def Signup(request):
+    return render(request, "blog/signup.html")
 
-
+def login(request):
+    return render(request, "blog/login.html")
