@@ -167,7 +167,7 @@ a.article-title:hover {
 }
 
 .banner {
-    background-image: url("https://img.freepik.com/free-vector/whale-swims-deep-space-illustration_33099-2027.jpg?w=1480&t=st=1681057437~exp=1681058037~hmac=7b09ce0b75f52701cc176aef936de4b2049d2e39a281be035dd57038225783f8");
+    background-image: url("https://images.unsplash.com/photo-1590273466070-40c466b4432d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8&w=1000&q=80");
     height: 400px;
 }
 .image-banner {
@@ -236,4 +236,24 @@ a.article-title:hover {
 .prof-contents {
     position: relative;
 
+}
+
+.site-name {
+    text-align: center;
+    padding-top: 6px;
+    padding-left: 30px;
+    margin-right: 0px;
+}
+
+
+.navcont {
+    padding-right: 0;
+}
+
+.search-bar {
+    padding-right: 30px;
+}
+
+.landing-right {
+    padding-right: 50px;
 }

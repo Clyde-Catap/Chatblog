@@ -25,51 +25,54 @@
     <header class="site-header naver">
       <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Chat Blog</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
+            <div class="container row">
+                <div class="col-2 site-name">
+                      <a class="navbar-brand mr-4 " href="{% url 'blog-home' %}">Chat Blog</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                      </button>
+                </div>
             <!--Search bar-->
-            <div class="input-group rounded w-25">
+            <div class="input-group rounded w-25 col-10 search-bar">
               <input type="search" class="form-control rounded input-sm" placeholder="Search" aria-label="🔍︎ Search" aria-describedby="search-addon" />
 <!--              <span class="input-group-text border-0" id="search-addon">-->
 <!--                <i class="fas fa-search"></i>-->
 <!--              </span>-->
             </div>
+            </div>
             <!--Center Nav Bar-->
-              <div class="container d-flex justify-content-center">
-              <ul class="navbar-nav flex-row d-none d-md-flex">
-                  <li class="nav-item me-3 me-lg-1 navic">
-                      <!--HOME-->
-                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">
-                      <span><i class="fa-solid fa-house fa-xl" style="color: #e0e2e6;" ></i></span>
-                    </a>
-                  </li>
-                      <!--CONTACT-->
-                  <li class="nav-item me-3 me-lg-1 navic">
-                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contact">
-                      <span><i class="fa-solid fa-phone fa-xl" style="color: #e0e2e6;"></i></span>
-                    </a>
-                  </li>
-                       <!--CONNECTIONS-->
-                  <li class="nav-item me-3 me-lg-1 navic">
-                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users">
-                      <span><i class="fa-solid fa-users fa-xl" style="color: #e0e2e6;"></i></span>
-                    </a>
-                  </li>
-                       <!--ABOUT-->
-                  <li class="nav-item me-3 me-lg-1 navic">
-                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About">
-                      <span><i class="fa-solid fa-info fa-xl" style="color: #e0e2e6;"></i></span>
-                    </a>
-                  </li>
+<!--              <div class="container d-flex justify-content-center">-->
+<!--              <ul class="navbar-nav flex-row d-none d-md-flex">-->
+<!--                  <li class="nav-item me-3 me-lg-1 navic">-->
+<!--                      &lt;!&ndash;HOME&ndash;&gt;-->
+<!--                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">-->
+<!--                      <span><i class="fa-solid fa-house fa-xl" style="color: #e0e2e6;" ></i></span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                      &lt;!&ndash;CONTACT&ndash;&gt;-->
+<!--                  <li class="nav-item me-3 me-lg-1 navic">-->
+<!--                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contact">-->
+<!--                      <span><i class="fa-solid fa-phone fa-xl" style="color: #e0e2e6;"></i></span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                       &lt;!&ndash;CONNECTIONS&ndash;&gt;-->
+<!--                  <li class="nav-item me-3 me-lg-1 navic">-->
+<!--                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users">-->
+<!--                      <span><i class="fa-solid fa-users fa-xl" style="color: #e0e2e6;"></i></span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                       &lt;!&ndash;ABOUT&ndash;&gt;-->
+<!--                  <li class="nav-item me-3 me-lg-1 navic">-->
+<!--                    <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About">-->
+<!--                      <span><i class="fa-solid fa-info fa-xl" style="color: #e0e2e6;"></i></span>-->
+<!--                    </a>-->
+<!--                  </li>-->
 
-              </ul>
-              </div>
+<!--              </ul>-->
+<!--              </div>-->
             <!-- Navbar Right Side -->
             <!--Notifications-->
-            <div class="container d-flex justify-content-center w-25 h-75">
-            <ul class="navbar-nav flex-row d-none d-md-flex">
+            <ul class="navbar-nav flex-row d-none d-md-flex float-end">
                 <li class="nav-item d-flex align-items-center dropdown navright">
                   <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-placement="bottom" title="Notifications">
                     <!--Notif Image-->
@@ -123,15 +126,14 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Connections</a></li>
+                    <li><a class="dropdown-item" href="#">About</a></li>
                     <li><a class="dropdown-item" href="#">Log Out</a></li>
                   </ul>
                 </li>
             </ul>
-            </div>
             <!--Profile-->
             <!-- Navbar Right Side -->
-          </div>
         </div>
       </nav>
     </header>
