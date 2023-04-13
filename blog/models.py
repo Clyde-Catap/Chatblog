@@ -3,9 +3,11 @@ from  django.utils import timezone
 from  django.contrib.auth.models import User
 
 
-
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    date_posted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+class User(models.Model):
+    username = models.CharField(max_length=100)
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    password = models.CharField(max_length=100)
+    def __str__(self):
+        return self.username

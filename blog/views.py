@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import User
 # Create your views here.
 posts = [
     {
@@ -105,4 +106,5 @@ def Signup(request):
     return render(request, "blog/signup.html")
 
 def login(request):
-    return render(request, "blog/login.html")
+    user_data = User.objects.all
+    return render(request, "blog/login.html", {'user': user_data})

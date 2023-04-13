@@ -270,7 +270,7 @@ a.article-title:hover {
 }
 
 .form-back {
-    padding: 50px 50px 50px 50px;
+    padding: 50px 50px 125px 50px;
     background-color: #152232;
 }
 
@@ -284,5 +284,14 @@ a.article-title:hover {
     }
 
 .form-heading {
+    text-align: center;
+}
+
+.div-form {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form-submit {
     text-align: center;
 }
