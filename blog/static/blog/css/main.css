@@ -1,3 +1,9 @@
+
+
+label {
+   color: #FFFFFF;
+}
+
 body {
   background: #0b1622;
   margin-top: 5rem;
@@ -256,4 +262,27 @@ a.article-title:hover {
 
 .landing-right {
     padding-right: 50px;
+}
+
+.form-signup {
+    background-color: #0b1622;
+    color: #ffffff;
+}
+
+.form-back {
+    padding: 50px 50px 50px 50px;
+    background-color: #152232;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 0.5; /* Firefox */
+}
+.form-control:focus {
+    color: #ffffff;
+    background-color: #152232;
+    }
+
+.form-heading {
+    text-align: center;
 }
