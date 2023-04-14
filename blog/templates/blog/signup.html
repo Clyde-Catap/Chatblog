@@ -5,15 +5,16 @@
 
     <h3 class="form-heading"> Sign up to ChatBlog</h3>
     <br><br><br>
-    <form>
+    <form method="POST" action="{% url 'blog-signup' %}">
+      {% csrf_token %}
       <div class="mb-3 div-form">
-        <input type="email" class="form-control form-signup border-0" placeholder="User Name" name="username">
+        <input type="text" class="form-control form-signup border-0" placeholder="User Name" name="username">
       </div>
       <div class="mb-3 div-form">
-        <input type="email" class="form-control form-signup border-0" placeholder="First Name" name="firstname">
+        <input type="text" class="form-control form-signup border-0" placeholder="First Name" name="firstname">
       </div>
       <div class="mb-3 div-form">
-        <input type="email" class="form-control form-signup border-0" placeholder="Last Name" name="lastname">
+        <input type="text" class="form-control form-signup border-0" placeholder="Last Name" name="lastname">
       </div>
       <div class="mb-3 div-form">
         <input type="email" class="form-control form-signup border-0" aria-describedby="emailHelp" placeholder="Email" name="email">
