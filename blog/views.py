@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import User
 from .forms import UserForm
+from django.contrib import messages
 # Create your views here.
 posts = [
     {
@@ -104,14 +105,19 @@ def Profile(request):
 
     return render(request, "blog/profile.html", content)
 def Signup(request):
+    # user_data = User.objects.all
+    # unique = None
+    # for user in user_data:
+    #     if user.username ==
     if request.method == "POST":
         form = UserForm(request.POST or None)
         if form.is_valid():
             form.save()
-        return render(request, "blog/profile.html")
+        return redirect('/home')
     else:
         return render(request, "blog/signup.html")
 
 def login(request):
     user_data = User.objects.all
     return render(request, "blog/login.html", {'user': user_data})
+
