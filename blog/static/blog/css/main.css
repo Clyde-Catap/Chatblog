@@ -9,7 +9,7 @@ body {
   margin-top: 5rem;
 }
 
-h1, h2, h4, h5 {
+h1, h2, h4 {
   color: #576CBC;
 }
 
@@ -19,6 +19,9 @@ h6 {
 }
 
 h3 {
+    color: #FFFFFF;
+}
+h5 {
     color: #FFFFFF;
 }
 
@@ -294,4 +297,9 @@ a.article-title:hover {
 
 .form-submit {
     text-align: center;
+}
+
+.Warning-message {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
 }

@@ -1,8 +1,16 @@
 {% extends "blog/landing.html" %}
 {% block content%}
 
-<div class="container w-25 form-back">
 
+
+<div class="container w-25 form-back">
+    {% if messages %}
+      {% for m in messages %}
+    <div class="Warning-message">
+    <h5>{{ m }}</h5>
+    </div>
+      {% endfor %}
+    {% endif %}
     <h3 class="form-heading"> Sign up to ChatBlog</h3>
     <br><br><br>
     <form method="POST" action="{% url 'blog-signup' %}">

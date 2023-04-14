@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import User
 from .forms import UserForm
 from django.contrib import messages
+import time
 # Create your views here.
 posts = [
     {
@@ -105,15 +106,30 @@ def Profile(request):
 
     return render(request, "blog/profile.html", content)
 def Signup(request):
-    # user_data = User.objects.all
-    # unique = None
-    # for user in user_data:
-    #     if user.username ==
+    # user_data = User.objects.all()
+    # data = {'user': user_data}
+    # unique = True
+
     if request.method == "POST":
         form = UserForm(request.POST or None)
         if form.is_valid():
             form.save()
-        return redirect('/home')
+            messages.success(request, ('Your Registration is sucessful!! redirecting in 5 sec'))
+            return redirect('/home')
+        else:
+            messages.warning(request, ('Email or Username already exists!!'))
+            return render(request, "blog/signup.html")
+            # for user in data['user']:
+            #     if user.username == form.cleaned_data['username'] or user.email == form.cleaned_data['email']:
+            #         unique = False
+            # if unique:
+            #     form.save()
+
+            #     time.sleep(5)
+            #     return render(request, "blog/signup.html")
+            # if not unique:
+
+            #     return render(request, "blog/signup.html")
     else:
         return render(request, "blog/signup.html")
 
