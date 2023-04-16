@@ -3,8 +3,11 @@ from django.http import HttpResponse
 from .models import User
 from .forms import UserForm
 from django.contrib import messages
+
 import time
 # Create your views here.
+sample_data_1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus turpis massa tincidunt dui ut ornare lectus sit. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Egestas pretium aenean pharetra magna ac placerat. Senectus et netus et malesuada fames. Feugiat in fermentum posuere urna nec. Justo laoreet sit amet cursus sit amet. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Vivamus at augue eget arcu dictum varius duis at consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. A lacus vestibulum sed arcu non odio euismod lacinia. Cras semper auctor neque vitae tempus quam pellentesque."
+
 posts = [
     {
         'author': 'Clyde Bryon Catap',
@@ -84,6 +87,14 @@ comments = [
     },
 ]
 
+post = [
+    {
+        'post': sample_data_1
+    }
+
+]
+
+
 def landing(request):
     return render(request, "blog/landing-content.html")
 
@@ -106,10 +117,6 @@ def Profile(request):
 
     return render(request, "blog/profile.html", content)
 def Signup(request):
-    # user_data = User.objects.all()
-    # data = {'user': user_data}
-    # unique = True
-
     if request.method == "POST":
         form = UserForm(request.POST or None)
         if form.is_valid():
@@ -119,21 +126,17 @@ def Signup(request):
         else:
             messages.warning(request, ('Email or Username already exists!!'))
             return render(request, "blog/signup.html")
-            # for user in data['user']:
-            #     if user.username == form.cleaned_data['username'] or user.email == form.cleaned_data['email']:
-            #         unique = False
-            # if unique:
-            #     form.save()
-
-            #     time.sleep(5)
-            #     return render(request, "blog/signup.html")
-            # if not unique:
-
-            #     return render(request, "blog/signup.html")
     else:
         return render(request, "blog/signup.html")
 
 def login(request):
     user_data = User.objects.all
     return render(request, "blog/login.html", {'user': user_data})
+
+def Post(request):
+    content = {
+        'post': post,
+    }
+
+    return render(request, "blog/post.html", content)
 

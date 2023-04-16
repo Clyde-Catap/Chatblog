@@ -7,6 +7,13 @@ label {
 body {
   background: #0b1622;
   margin-top: 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
 
 h1, h2, h4 {
@@ -168,6 +175,8 @@ a.article-title:hover {
 
 }
 
+
+
 .footer-a {
     background-color: #11161d;
 }
@@ -176,9 +185,30 @@ a.article-title:hover {
 }
 
 .banner {
+    position: relative;
     background-image: url("https://images.unsplash.com/photo-1590273466070-40c466b4432d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
     height: 400px;
+    z-index: -1;
+    bottom: 20px;
 }
+
+
+
+.banner-post {
+    background-image: url("https://img.freepik.com/free-vector/whale-swims-deep-space-illustration_33099-2027.jpg?w=1480&t=st=1681653631~exp=1681654231~hmac=e072a69c964879fe02d0fd8fcd6ff6b8a93e105dddffd4666649306b6a57093c");
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    filter: grayscale(85%);
+    z-index: -1;
+    bottom: 20px;
+}
+}
+.banner-post-inside {
+
+}
+
 .image-banner {
     height: 400px;
     width: 100%;
@@ -216,7 +246,7 @@ a.article-title:hover {
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 12px;
+    padding-top: 415px;
 }
 .desc-name{
     padding-top: 7.5px;
@@ -302,4 +332,39 @@ a.article-title:hover {
 .Warning-message {
     text-align: center;
     padding: 10px 10px 10px 10px;
+}
+
+
+
+.post-content {
+    padding: 50px 50px 50px 50px;
+    background-color: #152232;
+
+}
+.post-title {
+    position: relative;
+    z-index: 0;
+    bottom: 400px;
+
+}
+.post-title-head {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.post-comment {
+    background-color: #0b1622;
+}
+.post-comment-cont {
+    position: relative;
+    bottom: 320px;
+    z-index: 0;
+}
+.post-comment-text {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.comment-c-p {
+    padding-right: 50px;
+    padding-left: 50px;
 }

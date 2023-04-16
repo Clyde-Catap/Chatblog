@@ -1,0 +1,57 @@
+{% extends "blog/base.html" %}
+{% block content%}
+
+    <div class="banner-post">
+        <div class="banner-post-inside">
+
+        </div>
+    </div>
+    <div class="post-title container w-50">
+            <h1 class="text-center post-title-head" style="color: white;">Blog post of the day</h1>
+            <em><h1 class="text-center blockquote" style="color: white;"> by Username  </h1></em>
+    </div>
+<div class="container post-comment-cont">
+    <div class="container post-content w-75">
+    <!--Blog Post content-->
+        {% for p in post %}
+        <p>{{ p.post }}</p>
+        <p>{{ p.post }}</p>
+        <p>{{ p.post }}</p>
+        <p>{{ p.post }}</p>
+        <p>{{ p.post }}</p>
+        <p>{{ p.post }}</p>
+        {% endfor %}
+    </div>
+    <div class="container w-75">
+    <h4 style="color: white;">Comments</h4>
+    </div>
+            <!--Comments-->
+            <div class="container comment-c-p w-75">
+                <div class="card border-0">
+                  <div class="border-0 post-comment">
+                      <!--User Details-->
+                            <div class="row">
+                                <div class="col-1">
+                            <p class="content-set "><img
+                                        src="https://i.pinimg.com/originals/dc/29/1d/dc291d1ac415ebbaa368ecb7157d3f8b.jpg"
+                                        class="rounded-circle prof-image"
+                                        height="50"
+                                        alt="Black and White Portrait of a Man"
+                                        loading="lazy"></p>
+                                </div>
+                                <div class="col-10">
+                                <h4 class="text-left align-middle"><a class="user-name text-decoration-none info-link" href="">Clyde Bryon Catap</a></h4>
+                                </div>
+                            </div>
+                      <!--Content post-->
+                      <div class="post-comment-text">
+                      <p class="content-set">waeouiqwoeiuasdjakmsjoxucoasjdlm,zxcnoasldiwqdoashhkxjchas</p>
+                       </div>
+
+
+                  </div>
+                </div>
+            </div>
+</div>
+
+{% endblock content %}
