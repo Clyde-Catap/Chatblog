@@ -300,10 +300,16 @@ a.article-title:hover {
 .form-signup {
     background-color: #0b1622;
     color: #ffffff;
+    height:50px;
 }
+
 
 .form-back {
     padding: 50px 50px 125px 50px;
+    background-color: #152232;
+}
+.form-back-login {
+    padding: 50px 50px 40px 50px;
     background-color: #152232;
 }
 
@@ -326,6 +332,7 @@ a.article-title:hover {
 }
 
 .form-submit {
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -367,4 +374,9 @@ a.article-title:hover {
 .comment-c-p {
     padding-right: 50px;
     padding-left: 50px;
+}
+
+.create-acc {
+    padding-top: 50px;
+    font-size: 1.5rem;
 }

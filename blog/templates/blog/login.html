@@ -1,9 +1,38 @@
 {% extends "blog/landing.html" %}
 {% block content%}
 
-<h1>user_data</h1>
-{% for u in user %}
-<p>{{ u.firstname }}</p>
-{% endfor %}
+
+<div class="container w-25 form-back-login">
+    {% if messages %}
+      {% for m in messages %}
+    <div class="Warning-message">
+    <h5>{{ m }}</h5>
+    </div>
+      {% endfor %}
+    {% endif %}
+    <h3 class="form-heading"> Login to ChatBlog</h3>
+    <br><br><br>
+    <form method="POST" action="{% url 'blog-signup' %}">
+      {% csrf_token %}
+      <div class="mb-3 div-form">
+        <input type="email" class="form-control form-signup border-0" aria-describedby="emailHelp" placeholder="Email" name="email">
+      </div>
+      <div class="mb-3 div-form">
+        <input type="password" class="form-control form-signup border-0" placeholder="Password" name="password">
+      </div>
+        <div class="form-submit">
+      <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div>
+            <div class="p-2 bd-highlight text-center"><h6><button type="button" class="btn btn-link text-decoration-none info-link anchor user-name" style="font-size: 0.9rem;">Forgot Password?</button></h6></div>
+        </div>
+        <div class="create-acc">
+            <div class="p-2 bd-highlight text-center"><h6  style="color: white; font-size: 0.7rem;">Not registered?<button type="button" class="btn btn-link text-decoration-none info-link user-name" style="padding-bottom: 10px; font-size: 0.8rem;">Create an account</button></h6></div>
+        </div>
+    </form>
+</div>
+
+
+
 
 {% endblock content %}
