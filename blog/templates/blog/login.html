@@ -12,10 +12,10 @@
     {% endif %}
     <h3 class="form-heading"> Login to ChatBlog</h3>
     <br><br><br>
-    <form method="POST" action="{% url 'blog-signup' %}">
+    <form method="POST" action="">
       {% csrf_token %}
       <div class="mb-3 div-form">
-        <input type="email" class="form-control form-signup border-0" aria-describedby="emailHelp" placeholder="Email" name="email">
+        <input type="text" class="form-control form-signup border-0" placeholder="User Name" name="username">
       </div>
       <div class="mb-3 div-form">
         <input type="password" class="form-control form-signup border-0" placeholder="Password" name="password">

@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from .models import User
 from .forms import UserForm
 from django.contrib import messages
+from django.contrib.auth import authenticate,login, logout
+
 
 import time
 # Create your views here.
@@ -121,16 +123,22 @@ def Signup(request):
         form = UserForm(request.POST or None)
         if form.is_valid():
             form.save()
-            messages.success(request, ('Your Registration is sucessful!! redirecting in 5 sec'))
-            return redirect('/home')
+            return redirect('blog-login')
         else:
             messages.warning(request, ('Email or Username already exists!!'))
             return render(request, "blog/signup.html")
     else:
         return render(request, "blog/signup.html")
 
-def login(request):
+def loginPage(request):
     user_data = User.objects.all
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('blog-home')
     return render(request, "blog/login.html", {'user': user_data})
 
 def Post(request):
